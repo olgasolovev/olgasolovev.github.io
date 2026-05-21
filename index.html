@@ -109,20 +109,23 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     }
 
-    .photo-placeholder {
+    .profile-photo {
       width: 100%;
       aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center;
       border-radius: 16px;
-      background: linear-gradient(135deg, var(--accent-soft), #fff);
-      border: 1px dashed var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      text-align: center;
-      padding: 1rem;
+      border: 1px solid var(--line);
       margin-bottom: 1rem;
-      font-weight: 600;
+      display: block;
+      background: var(--accent-soft);
+    }
+
+    .photo-note {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: -0.4rem;
+      margin-bottom: 1rem;
     }
 
     main {
@@ -271,7 +274,8 @@
     </div>
 
     <aside class="profile-card">
-      <div class="photo-placeholder"><br /><br /><small>assets/olga.jpg</small></div>
+      <img class="profile-photo" src="assets/olga.jpg" alt="Portrait of Olga Soloveva" />
+      <p class="photo-note">Photo file: <code>assets/olga.jpg</code></p>
       <p><strong>Affiliation</strong><br />GSI Helmholtzzentrum für Schwerionenforschung / Goethe University Frankfurt</p>
       <p><strong>Field</strong><br />Theoretical nuclear physics, heavy-ion collisions, QCD transport theory</p>
       <p><strong>Profiles</strong><br />
@@ -312,7 +316,7 @@
       <h2>News</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <strong>Current project: Phase transitions in strongly interacting QCD matter bz transport simulations</strong>
+          <strong>Current project: Phase transitions in strongly interacting QCD matter by transport simulations</strong>
           <span class="date">2026</span>
           <p>Developing a multi-model, ML-supported framework for jets and heavy flavor in microscopic transport theory.</p>
         </div>
