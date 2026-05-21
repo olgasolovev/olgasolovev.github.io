@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal academic website of Dr. Olga Soloveva, theoretical nuclear physicist working on PHSD, DQPM, QGP transport, hard probes, and machine learning in heavy-ion collisions." />
+  <title>Olga Soloveva | Theoretical Nuclear Physics</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --panel: #ffffff;
+      --text: #202124;
+      --muted: #60656f;
+      --accent: #5a3f8c;
+      --accent-soft: #ebe4f7;
+      --line: #ded9d2;
+      --max: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 1.2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin: 0 0 1.3rem;
+      max-width: 760px;
+    }
+
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.6rem 0;
+    }
+
+    .profile-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.3rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent-soft), #fff);
+      border: 1px dashed var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.2rem 4rem;
+    }
+
+    section {
+      margin: 3rem 0;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.2rem;
+      min-height: 100%;
+    }
+
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .timeline {
+      border-left: 2px solid var(--line);
+      padding-left: 1.2rem;
+    }
+
+    .timeline-item {
+      margin: 1.1rem 0;
+    }
+
+    .timeline-item strong {
+      display: block;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .pub-list {
+      padding-left: 1.2rem;
+    }
+
+    .pub-list li {
+      margin-bottom: 0.9rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+    }
+
+    .tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 1.2rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--panel);
+    }
+
+    @media (max-width: 780px) {
+      nav, .nav-links {
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 2.6rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="#top">Olga Soloveva</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#code">Code</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top" class="hero">
+    <div>
+      <h1>Dr. Olga Soloveva</h1>
+      <p class="subtitle">Theoretical nuclear physicist working on strongly interacting QCD matter, microscopic transport theory, heavy-ion phenomenology, hard probes, and machine-learning methods for high-rate experiments.</p>
+      <p>I develop and apply the Parton–Hadron–String Dynamics transport approach and the Dynamical QuasiParticle Model to study the quark–gluon plasma and related phases of strongly interacting matter. My current work combines microscopic off-shell transport with machine learning for QGP event selection, hard-probe tomography, and inverse problems in relativistic heavy-ion collisions.</p>
+      <div class="quote">Transport theory, machine learning, and experimental realism provide complementary routes to understanding the microscopic properties of QCD matter.</div>
+      <div class="tag-list">
+        <span class="tag">PHSD</span>
+        <span class="tag">DQPM</span>
+        <span class="tag">QGP</span>
+        <span class="tag">Hard probes</span>
+        <span class="tag">Heavy flavor</span>
+        <span class="tag">Machine learning</span>
+        <span class="tag">CBM/FAIR</span>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="photo-placeholder">Replace with<br />your photo<br /><small>assets/olga.jpg</small></div>
+      <p><strong>Affiliation</strong><br />GSI Helmholtzzentrum für Schwerionenforschung / Goethe University Frankfurt</p>
+      <p><strong>Field</strong><br />Theoretical nuclear physics, heavy-ion collisions, QCD transport theory</p>
+      <p><strong>Profiles</strong><br />
+        <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&ui-exclude-self-citations=true">InspireHEP</a> ·
+        <a href="https://github.com/osoloque">GitHub</a> ·
+        <a href="https://gitlab.com/oesolovjeva">GitLab</a> ·
+        <a href="https://www.linkedin.com/in/olga-soloveva/">LinkedIn</a>
+      </p>
+    </aside>
+  </div>
+
+  <main>
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Scientific interests</h3>
+      <ul>
+        <li>Phase transitions in strongly correlated systems, with a focus on QCD matter at high temperature and finite baryon density.</li>
+        <li>Microscopic transport simulations of relativistic heavy-ion collisions within the PHSD/DQPM framework.</li>
+        <li>Phenomenology of heavy-ion collisions, including thermodynamics, transport coefficients, and non-equilibrium dynamics at finite temperature and density.</li>
+      </ul>
+      <div class="grid">
+        <article class="card">
+          <h3>Microscopic transport of QCD matter</h3>
+          <p>Development and application of PHSD and DQPM to study the non-equilibrium dynamics, transport coefficients, and quasiparticle properties of strongly interacting matter.</p>
+        </article>
+        <article class="card">
+          <h3>Hard probes and heavy flavor</h3>
+          <p>Jet and heavy-quark transport in a strongly interacting medium, including elastic and radiative energy loss, diffusion, and sensitivity to non-perturbative quasiparticle degrees of freedom.</p>
+        </article>
+        <article class="card">
+          <h3>Machine learning for heavy-ion physics</h3>
+          <p>CNN-, GNN-, and transformer-based methods for event classification, QGP-trigger development, surrogate modeling, and inverse extraction of medium properties.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Current project: inverse hard-probe problem in strongly interacting QCD matter</strong>
+          <span class="date">2026</span>
+          <p>Developing a multi-model, ML-supported framework for jets and heavy flavor in microscopic transport theory.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>CNN-based online QGP trigger for CBM/FAIR</strong>
+          <span class="date">2026</span>
+          <p>Work on machine-learning event selection using PHSD, UrQMD cross-model tests, CBM acceptance, and detector-reconstruction effects.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>NuPECC Long Range Plan 2024</strong>
+          <span class="date">2024–2025</span>
+          <p>Contributor to discussions on nuclear-physics tools, machine learning, artificial intelligence, and quantum computing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <p>Selected seminar and conference presentations. Upload your slides as PDF files to the <code>assets/</code> folder and update the links below.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Jets and heavy flavor in strongly interacting QCD matter</h3>
+          <p>Bielefeld heavy-quark workshop, 2026.<br />
+            <a href="assets/Soloveva_Jets_Bielefeld_2026.pdf">Slides PDF</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>CNN-based online trigger for QGP event selection</h3>
+          <p>Machine-learning methods for high-rate heavy-ion experiments.<br />
+            <a href="assets/Soloveva_CNN_QGP_Trigger.pdf">Slides PDF</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>PHSD/DQPM transport and quasiparticle properties</h3>
+          <p>Seminar presentation on microscopic transport properties of QCD matter.<br />
+            <a href="assets/Soloveva_PHSD_DQPM.pdf">Slides PDF</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <ol class="pub-list">
+        <li><strong>Deep neural-network extraction of quasiparticle properties from heavy-ion observables.</strong><br />O. Soloveva, A. Palermo, E. Bratkovskaya, <em>Phys. Rev. C</em> (2024).</li>
+        <li><strong>CNN-based online trigger for quark–gluon plasma event selection.</strong><br />O. Soloveva, A. Belousov, J. Steinheimer, M. Bleicher, I. Kisel, E. Bratkovskaya, manuscript in preparation.</li>
+        <li><strong>Transport properties of the strongly interacting quark–gluon plasma in PHSD/DQPM.</strong><br />Research related to doctoral work at Goethe University Frankfurt.</li>
+        <li><strong>Heavy-flavour transport, partonic scattering, and radiative energy loss in a strongly interacting medium.</strong><br />Collaborative work within the PHSD/DQPM framework.</li>
+      </ol>
+      <p>For a full and automatically updated publication list, see <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&ui-exclude-self-citations=true">InspireHEP</a>.</p>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Postdoctoral researcher / PHSD developer</strong>
+          <span class="date">GSI Helmholtzzentrum für Schwerionenforschung and Goethe University Frankfurt</span>
+        </div>
+        <div class="timeline-item">
+          <strong>Ph.D. in Physics</strong>
+          <span class="date">Goethe University Frankfurt, 2018–2021</span>
+          <p>Thesis on transport properties of the strongly interacting quark–gluon plasma; magna cum laude.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>PHSD developer</strong>
+          <span class="date">Since 2018</span>
+          <p>Development and application of the Parton–Hadron–String Dynamics transport approach.</p>
+        </div>
+      </div>
+      <p><a href="assets/Olga_Soloveva_CV.pdf">Download CV</a> — add your CV PDF to <code>assets/Olga_Soloveva_CV.pdf</code>.</p>
+    </section>
+
+    <section id="code">
+      <h2>Code and projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>QGP trigger ML</h3>
+          <p>Compact CNN-based event classification for high-rate heavy-ion experiments and CBM-oriented online event selection.</p>
+        </article>
+        <article class="card">
+          <h3>PHSD/DQPM analysis</h3>
+          <p>Tools and workflows for microscopic transport simulations, event-level observables, transport coefficients, and heavy-flavour studies.</p>
+        </article>
+        <article class="card">
+          <h3>Machine-learning studies</h3>
+          <p>Exploratory ML projects using CNNs, GNNs, transformers, and interpretability methods such as SHAP.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:oesolovjeva@gmail.com">oesolovjeva@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/osoloque">github.com/osoloque</a></p>
+      <p><strong>GitLab:</strong> <a href="https://gitlab.com/oesolovjeva">gitlab.com/oesolovjeva</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/olga-soloveva/">linkedin.com/in/olga-soloveva</a></p>
+      <p><strong>Academic profile:</strong> <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&ui-exclude-self-citations=true">InspireHEP author page</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Olga Soloveva. Built with static HTML for GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
