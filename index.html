@@ -284,6 +284,109 @@
       background: var(--panel);
     }
 
+
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 820px;
+      margin-top: -0.4rem;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .preview-card {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      min-height: 100%;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.035);
+    }
+
+    .preview-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+    }
+
+    .preview-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.02rem;
+      line-height: 1.3;
+    }
+
+    .preview-card p {
+      margin: 0.3rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .preview-meta {
+      display: inline-block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.65rem;
+    }
+
+    .button-row a, .button {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: #fff;
+      border-radius: 999px;
+      padding: 0.22rem 0.7rem;
+      font-weight: 650;
+      font-size: 0.88rem;
+    }
+
+    .button-row a:hover, .button:hover {
+      background: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    .legal-page {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 3rem 1.2rem 4rem;
+    }
+
+    .legal-page h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.08;
+      margin: 0 0 1rem;
+      letter-spacing: -0.035em;
+    }
+
+    .legal-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.35rem;
+      margin: 1rem 0;
+    }
+
+    .legal-box h2 {
+      margin-top: 0;
+    }
+
     @media (max-width: 780px) {
       nav, .nav-links {
         align-items: flex-start;
@@ -298,7 +401,11 @@
         padding-top: 2.6rem;
       }
 
-      .grid, .metrics-grid {
+      .grid, .metrics-grid, .preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-card {
         grid-template-columns: 1fr;
       }
     }
@@ -316,6 +423,8 @@
         <a href="#cv">CV</a>
         <a href="#code">Code</a>
         <a href="#contact">Contact</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
     </nav>
   </header>
@@ -401,25 +510,23 @@
 
     <section id="talks">
       <h2>Talks</h2>
-      <p>Selected seminar and conference presentations</p>
-      <div class="grid">
-        <article class="card">
-          <h3>Jets and heavy flavor in strongly interacting QCD matter</h3>
-          <p>Workshop “Heavy Quarks in the Quark-Gluon Plasma”, Bielefeld, 18–20 May 2026.<br />
-            <a href="assets/Soloveva_Jets_Bielefeld_20May2026.pdf">Slides PDF</a>
-          </p>
+      <p class="section-intro">Selected seminar and conference presentations. Each card includes a compact visual preview and a direct link to slides or external material.</p>
+      <div class="preview-grid">
+        <article class="preview-card">
+          <img src="assets/talk-jets-bielefeld.svg" alt="Preview graphic for a talk on jets and heavy flavor in QCD matter" />
+          <div><span class="preview-meta">Bielefeld · 18–20 May 2026</span><h3>Jets and heavy flavor in strongly interacting QCD matter</h3><p>Workshop “Heavy Quarks in the Quark-Gluon Plasma”, Bielefeld.</p><div class="button-row"><a href="assets/Soloveva_Jets_Bielefeld_20May2026.pdf">Slides PDF</a></div></div>
         </article>
-        <article class="card">
-          <h3>Transport properties of the QGP matter facilitated by Machine learning-based models</h3>
-          <p>STRONG-2020 NA7 Workshop and HFHF Theory Retreat, Giardini Naxos, Italy, September 28, 2023.<br />
-            <a href="assets/ML4DQPM_Olga_Soloveva.pdf">Slides PDF</a>
-          </p>
+        <article class="preview-card">
+          <img src="assets/talk-ml-dqpm.svg" alt="Preview graphic for a talk on machine learning and DQPM transport properties" />
+          <div><span class="preview-meta">Giardini Naxos · 28 September 2023</span><h3>Transport properties of QGP matter facilitated by machine-learning models</h3><p>STRONG-2020 NA7 Workshop and HFHF Theory Retreat.</p><div class="button-row"><a href="assets/ML4DQPM_Olga_Soloveva.pdf">Slides PDF</a></div></div>
         </article>
-        <article class="card">
-          <h3>Dynamical properties of QGP matter at finite temperature and chemical potential</h3>
-          <p>MUSES Seminar Series, May 2023, online.<br />
-            <a href="https://cloud.musesframework.io/s/gzMYX5y8MBWXpKQ?dir=/&editing=false&openfile=true">Link</a>
-          </p>
+        <article class="preview-card">
+          <img src="assets/talk-muses.svg" alt="Preview graphic for a MUSES seminar on QGP at finite temperature and chemical potential" />
+          <div><span class="preview-meta">MUSES Seminar Series · May 2023</span><h3>Dynamical properties of QGP matter at finite temperature and chemical potential</h3><p>Online seminar on quasiparticle dynamics, transport coefficients, and finite-density QCD matter.</p><div class="button-row"><a href="https://cloud.musesframework.io/s/gzMYX5y8MBWXpKQ?dir=/&editing=false&openfile=true">External link</a></div></div>
+        </article>
+        <article class="preview-card">
+          <img src="assets/talk-outreach.svg" alt="Preview graphic for public outreach talk on the early universe" />
+          <div><span class="preview-meta">Public outreach</span><h3>Early Universe and Fundamental Interactions</h3><p>Public talk for the cultural and educational project “Kurilka Gutenberga”.</p><div class="button-row"><a href="https://www.youtube.com/watch?v=TEUe_cgZ-Y0">YouTube</a></div></div>
         </article>
       </div>
     </section>
@@ -442,63 +549,14 @@
         </div>
       </div>
       <p class="note">Citation counts and h-index are linked dynamically because they change over time; the InspireHEP links above are configured with citation summary enabled and self-citations excluded.</p>
-      <ol class="pub-list">
-        <li>
-          <strong>CNN-based online trigger for quark–gluon plasma event selection.</strong><br />
-          O. Soloveva, A. Belousov, I. Kisel and E. L. Bratkovskaya, arXiv:2605.26280 [nucl-th] (2026), submitted.<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2605.26280">arXiv</a> <a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP</a></span>
-        </li>
-        <li>
-          <strong>Extraction of the microscopic properties of quasiparticles using deep neural networks.</strong><br />
-          O. Soloveva, A. Palermo and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>110</strong>, 034908 (2024).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2311.15984">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.110.034908">DOI</a></span>
-        </li>
-        <li>
-          <strong>Thermal production of charm quarks in relativistic heavy-ion collisions.</strong><br />
-          T. Song, I. Grishmanovskii, O. Soloveva and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>110</strong>, 034906 (2024).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2404.00425">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.110.034906">DOI</a></span>
-        </li>
-        <li>
-          <strong>Jet transport coefficients by elastic and radiative scatterings in the strongly interacting quark-gluon plasma.</strong><br />
-          I. Grishmanovskii, O. Soloveva, T. Song, C. Greiner and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>110</strong>, 014908 (2024).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2402.04923">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.110.014908">DOI</a></span>
-        </li>
-        <li>
-          <strong>Inelastic and elastic parton scatterings in the strongly interacting quark-gluon plasma.</strong><br />
-          I. Grishmanovskii, O. Soloveva, T. Song, C. Greiner and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>109</strong>, 024911 (2024).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2308.03105">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.109.024911">DOI</a></span>
-        </li>
-        <li>
-          <strong>Soft gluon emission from heavy quark scattering in strongly interacting quark-gluon plasma.</strong><br />
-          T. Song, I. Grishmanovskii and O. Soloveva, <em>Phys. Rev. D</em> <strong>107</strong>, 036009 (2023).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2210.04010">arXiv</a> <a href="https://doi.org/10.1103/PhysRevD.107.036009">DOI</a></span>
-        </li>
-        <li>
-          <strong>Exploring jet transport coefficients by elastic scattering in the strongly interacting quark-gluon plasma.</strong><br />
-          I. Grishmanovskii, O. Soloveva, T. Song, C. Greiner and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>106</strong>, 014903 (2022).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2204.01561">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.106.014903">DOI</a></span>
-        </li>
-        <li>
-          <strong>Diffusion coefficient matrix of the strongly interacting quark-gluon plasma.</strong><br />
-          J. A. Fotakis, O. Soloveva, C. Greiner, O. Kaczmarek and E. Bratkovskaya, <em>Phys. Rev. D</em> <strong>104</strong>, 034014 (2021).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/2102.08140">arXiv</a> <a href="https://doi.org/10.1103/PhysRevD.104.034014">DOI</a></span>
-        </li>
-        <li>
-          <strong>Transport properties and equation of state of hot and dense QGP matter near the critical endpoint in the phenomenological dynamical quasiparticle model.</strong><br />
-          O. Soloveva, J. Aichelin and E. Bratkovskaya, <em>Phys. Rev. D</em> <strong>105</strong>, 054011 (2022).<br />
-          <span class="pub-links"><a href="https://inspirehep.net/literature/1907893">InspireHEP</a> <a href="https://doi.org/10.1103/PhysRevD.105.054011">DOI</a></span>
-        </li>
-        <li>
-          <strong>Transport coefficients for the hot quark-gluon plasma at finite chemical potential &mu;<sub>B</sub>.</strong><br />
-          O. Soloveva, P. Moreau and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>101</strong>, 045203 (2020).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/1911.08547">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.101.045203">DOI</a></span>
-        </li>
-        <li>
-          <strong>Exploring the partonic phase at finite chemical potential within an extended off-shell transport approach.</strong><br />
-          P. Moreau, O. Soloveva, L. Oliva, T. Song, W. Cassing and E. Bratkovskaya, <em>Phys. Rev. C</em> <strong>100</strong>, 014911 (2019).<br />
-          <span class="pub-links"><a href="https://arxiv.org/abs/1903.10257">arXiv</a> <a href="https://doi.org/10.1103/PhysRevC.100.014911">DOI</a></span>
-        </li>
-      </ol>
+      <div class="preview-grid" aria-label="Selected publication cards">
+        <article class="preview-card"><img src="assets/pub-qgp-trigger.svg" alt="Preview graphic for CNN-based online trigger for quark–gluon plasma event selection" /><div><span class="preview-meta">arXiv:2605.26280 · 2026</span><h3>CNN-based online trigger for quark–gluon plasma event selection</h3><p>O. Soloveva, A. Belousov, I. Kisel and E. L. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2605.26280">arXiv</a><a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-ml-dqpm.svg" alt="Preview graphic for Extraction of the microscopic properties of quasiparticles using deep neural networks" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Extraction of the microscopic properties of quasiparticles using deep neural networks</h3><p>O. Soloveva, A. Palermo and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2311.15984">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.034908">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-charm.svg" alt="Preview graphic for Thermal production of charm quarks in relativistic heavy-ion collisions" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Thermal production of charm quarks in relativistic heavy-ion collisions</h3><p>T. Song, I. Grishmanovskii, O. Soloveva and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2404.00425">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.034906">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-jet-transport.svg" alt="Preview graphic for Jet transport coefficients by elastic and radiative scatterings in the strongly interacting QGP" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Jet transport coefficients by elastic and radiative scatterings in the strongly interacting QGP</h3><p>I. Grishmanovskii, O. Soloveva, T. Song, C. Greiner and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2402.04923">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.014908">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-finite-mub.svg" alt="Preview graphic for Transport properties and equation of state of hot and dense QGP matter near the critical endpoint" /><div><span class="preview-meta">Phys. Rev. D 105 · 2022</span><h3>Transport properties and equation of state of hot and dense QGP matter near the critical endpoint</h3><p>O. Soloveva, J. Aichelin and E. Bratkovskaya.</p><div class="button-row"><a href="https://inspirehep.net/literature/1907893">InspireHEP</a><a href="https://doi.org/10.1103/PhysRevD.105.054011">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-transport-coefficients.svg" alt="Preview graphic for Transport coefficients for the hot quark-gluon plasma at finite chemical potential μB" /><div><span class="preview-meta">Phys. Rev. C 101 · 2020</span><h3>Transport coefficients for the hot quark-gluon plasma at finite chemical potential μ<sub>B</sub></h3><p>O. Soloveva, P. Moreau and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/1911.08547">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.101.045203">DOI</a></div></div></article>
+      </div>
     </section>
 
     <section id="cv">
@@ -553,24 +611,6 @@
       <p><strong>Academic profile:</strong> <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP author page</a></p>
     </section>
 
-    <section id="impressum">
-      <h2>Impressum</h2>
-      <p><strong>Angaben gemäß § 5 DDG</strong></p>
-      <p>
-        Dr. Olga Soloveva<br />
-        Goethe University Frankfurt, Max-von-Laue-Str. 12<br />
-        60438 Frankfurt am Main<br />
-        Germany
-      </p>
-      <p>
-        <strong>Kontakt:</strong><br />
-        E-Mail: <a href="mailto:oesolovjeva@gmail.com">oesolovjeva@gmail.com</a>
-      </p>
-      <p>
-        <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br />
-        Dr. Olga Soloveva
-      </p>
-    </section>
 
     <section id="outreach">
       <h2>Outreach</h2>
@@ -588,31 +628,9 @@
       </div>
     </section>
 
-    <section id="privacy">
-      <h2>Datenschutzerklärung</h2>
-      <p><strong>1. Allgemeine Hinweise</strong></p>
-      <p>Diese Website ist eine persönliche wissenschaftliche Website. Sie dient der Information über Forschung, Publikationen, Vorträge und wissenschaftliche Projekte.</p>
 
-      <p><strong>2. Verantwortliche Person</strong></p>
-      <p>Dr. Olga Soloveva</p>
 
-      <p><strong>3. Hosting über GitHub Pages</strong></p>
-      <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst von GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Besuch einer GitHub-Pages-Website kann GitHub aus Sicherheitsgründen die IP-Adresse der Besucherinnen und Besucher verarbeiten und speichern. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub.</p>
-
-      <p><strong>4. Keine Cookies, kein Tracking</strong></p>
-      <p>Diese Website verwendet keine eigenen Cookies, keine Analysewerkzeuge wie Google Analytics und keine Werbe- oder Trackingdienste.</p>
-
-      <p><strong>5. Externe Links</strong></p>
-      <p>Diese Website enthält Links zu externen Seiten, zum Beispiel GitHub, GitLab, LinkedIn, arXiv, DOI, and InspireHEP. Beim Anklicken externer Links gelten die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
-    </section>
-
-    <section id="license">
-      <h2>License</h2>
-      <p>Unless otherwise stated, the text and images on this website are © Olga Soloveva. Reuse requires permission.</p>
-      <p>The HTML/CSS source code of this website may be reused under the MIT License. Scientific slides, publications, figures, and CV files linked from this website remain under their respective copyright and license terms.</p>
-    </section>
-
-    <p><a href="#impressum">Impressum</a> · <a href="#privacy">Datenschutzerklärung</a> · <a href="#license">License</a></p>
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="datenschutz.html#license">License</a></p>
   </main>
 
   <footer>
