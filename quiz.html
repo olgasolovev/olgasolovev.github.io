@@ -12,27 +12,18 @@
 <body>
   <header>
     <nav>
-      <a class="brand" href="index.html#top">Olga Soloveva</a>
+      <a class="brand" href="index.html">Olga Soloveva</a>
       <div class="nav-links">
-        <a href="index.html#research">Research</a>
-        <a href="index.html#talks">Talks</a>
-        <a href="index.html#outreach">Outreach</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#cv">CV</a>
-        <a href="index.html#code">Code</a>
-        <a href="quiz.html" style="font-weight:bold;">Quiz</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html">← Back to Main Page</a>
       </div>
     </nav>
   </header>
 
-  <main style="padding-top: 3rem;">
+  <main style="padding-top: 3rem; max-width: 800px; margin: 0 auto;">
     <!-- Interactive Quiz Container -->
-    <div class="quiz-container" style="max-width: 800px; margin: 0 auto;">
+    <div class="quiz-container">
       <h3 class="quiz-title">Interactive Demo: The LPM Effect & Scattering</h3>
-      <p style="text-align: center; color: var(--muted); margin-bottom: 2rem;">Test your knowledge of the Landau-Pomeranchuk-Migdal effect.</p>
+      <p style="text-align: center; color: var(--muted); margin-bottom: 2rem;">Test your knowledge of the Landau-Pomeranchuk-Migdal effect based on the recent presentation timeline.</p>
       
       <div id="quiz"></div>
       <button id="submit-quiz">Submit Answers</button>
@@ -40,8 +31,9 @@
     </div>
   </main>
 
-  <footer style="margin-top: 4rem;">
-    © <span id="year"></span> Olga Soloveva. Built with static HTML for GitHub Pages.
+  <footer style="margin-top: 4rem; text-align: center; border-top: 1px solid var(--line); padding: 2rem;">
+    <p><a href="index.html">Home</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    <p style="color: var(--muted);">© <span id="year"></span> Olga Soloveva. Built with static HTML for GitHub Pages.</p>
   </footer>
 
   <script>

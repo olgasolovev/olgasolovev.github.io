@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Interactive quiz on the Landau-Pomeranchuk-Migdal (LPM) effect." />
-  <title>LPM Quiz | Olga Soloveva</title>
+  <meta name="description" content="Personal academic website of Dr. Olga Soloveva, theoretical nuclear physicist working on PHSD, DQPM, QGP transport, hard probes, and machine learning in heavy-ion collisions." />
+  <title>Olga Soloveva | Theoretical Nuclear Physics</title>
   
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -12,143 +12,225 @@
 <body>
   <header>
     <nav>
-      <a class="brand" href="index.html#top">Olga Soloveva</a>
+      <a class="brand" href="#top">Olga Soloveva</a>
       <div class="nav-links">
-        <a href="index.html#research">Research</a>
-        <a href="index.html#talks">Talks</a>
-        <a href="index.html#outreach">Outreach</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#cv">CV</a>
-        <a href="index.html#code">Code</a>
-        <a href="quiz.html" style="font-weight:bold;">Quiz</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#outreach">Outreach</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#code">Code</a>
+        <a href="#contact">Contact</a>
+        <a href="quiz.html">Quiz</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </div>
     </nav>
   </header>
 
-  <main style="padding-top: 3rem;">
-    <!-- Interactive Quiz Container -->
-    <div class="quiz-container" style="max-width: 800px; margin: 0 auto;">
-      <h3 class="quiz-title">Interactive Demo: The LPM Effect & Scattering</h3>
-      <p style="text-align: center; color: var(--muted); margin-bottom: 2rem;">Test your knowledge of the Landau-Pomeranchuk-Migdal effect based on the recent presentation timeline.</p>
-      
-      <div id="quiz"></div>
-      <button id="submit-quiz">Submit Answers</button>
-      <div id="quiz-results"></div>
+  <div id="top" class="hero">
+    <div>
+      <h1>Dr. Olga Soloveva</h1>
+      <p class="subtitle">Theoretical nuclear physicist working on strongly interacting QCD matter, microscopic transport theory, heavy-ion phenomenology, hard probes, and machine-learning methods for high-rate experiments.</p>
+      <p>I develop and apply microscopic transport approaches and effective models to study the quark–gluon plasma and related phases of strongly interacting QCD matter. My current work combines microscopic off-shell transport with machine learning for QGP event selection, hard-probe tomography, and inverse problems in relativistic heavy-ion collisions.</p>
+      <div class="quote">Transport theory, machine learning, and phenomenology provide complementary routes to understanding the microscopic properties of QCD matter.</div>
+      <div class="tag-list">
+        <span class="tag">QCD at extreme conditions</span>
+        <span class="tag">transport simulations</span>
+        <span class="tag">QGP</span>
+        <span class="tag">Hard probes</span>
+        <span class="tag">Phase transitions</span>
+        <span class="tag">Heavy flavor</span>
+        <span class="tag">Machine learning</span>
+        <span class="tag">PHSD</span>
+        <span class="tag">DQPM</span>
+        <span class="tag">CBM/FAIR</span>
+      </div>
     </div>
+
+    <aside class="profile-card">
+      <img class="profile-photo" src="assets/olga.jpeg" alt="Portrait of Olga Soloveva" />
+      <p><strong>Affiliation</strong><br />GSI Helmholtzzentrum für Schwerionenforschung / Goethe University Frankfurt</p>
+      <p><strong>Field</strong><br />Theoretical nuclear physics, heavy-ion collisions, QCD transport theory</p>
+      <p><strong>Profiles</strong><br />
+        <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&ui-exclude-self-citations=true">InspireHEP</a> ·
+        <a href="https://github.com/olgasolovev">GitHub</a> ·
+        <a href="https://gitlab.com/osolo">GitLab</a> ·
+        <a href="https://www.linkedin.com/in/olga-evg-soloveva/">LinkedIn</a>
+      </p>
+    </aside>
+  </div>
+
+  <main>
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Scientific interests</h3>
+      <ul>
+        <li>Phase transitions in strongly correlated systems, with a focus on QCD matter at high temperature and finite baryon density.</li>
+        <li>Microscopic transport simulations of relativistic heavy-ion collisions within the PHSD/DQPM framework.</li>
+        <li>Phenomenology of heavy-ion collisions, including thermodynamics, transport coefficients, and non-equilibrium dynamics at finite temperature and density.</li>
+      </ul>
+      <div class="grid">
+        <article class="card">
+          <h3>Microscopic transport of QCD matter</h3>
+          <p>Development and application of PHSD and DQPM to study the non-equilibrium dynamics, transport coefficients, and quasiparticle properties of strongly interacting matter.</p>
+        </article>
+        <article class="card">
+          <h3>Hard probes and heavy flavor</h3>
+          <p>Jet and heavy-quark transport in a strongly interacting medium, including elastic and radiative energy loss, diffusion, and sensitivity to non-perturbative quasiparticle degrees of freedom.</p>
+        </article>
+        <article class="card">
+          <h3>Machine learning for heavy-ion physics</h3>
+          <p>CNN-, GNN-, and transformer-based methods for event classification, QGP-trigger development, surrogate modeling, and inverse extraction of medium properties.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Current project: Phase transitions in strongly interacting QCD matter by transport simulations</strong>
+          <span class="date">2026</span>
+          <p>Developing a multi-model, ML-supported framework to identify signatures the QCD 1st and 2nd order phase transitions in microscopic transport simulations.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>CNN-based online QGP trigger for CBM/FAIR</strong>
+          <span class="date">2026</span>
+          <p>Work on machine-learning event selection using PHSD, UrQMD cross-model tests, CBM acceptance, and detector-reconstruction effects.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>NuPECC Long Range Plan 2024</strong>
+          <span class="date">2024–2025</span>
+          <p>Contributor to discussions on nuclear-physics tools, machine learning, artificial intelligence, and quantum computing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <p class="section-intro">Selected seminar and conference presentations. Each card includes a compact visual preview and a direct link to slides or external material.</p>
+      <div class="preview-grid">
+        <article class="preview-card">
+          <img src="assets/jets-bielefeld26.png" alt="Preview graphic for a talk on jets and heavy flavor in QCD matter" />
+          <div><span class="preview-meta">Bielefeld · 18–20 May 2026</span><h3>Jets and heavy flavor in strongly interacting QCD matter</h3><p>Workshop “Heavy Quarks in the Quark-Gluon Plasma”, Bielefeld.</p><div class="button-row"><a href="assets/Soloveva_Jets_Bielefeld_20May2026.pdf">Slides PDF</a></div></div>
+        </article>
+        <article class="preview-card">
+          <img src="assets/hfhf-ml.png" alt="Preview graphic for a talk on machine learning and DQPM transport properties" />
+          <div><span class="preview-meta">Giardini Naxos · 28 September 2023</span><h3>Transport properties of QGP matter facilitated by machine-learning models</h3><p>STRONG-2020 NA7 Workshop and HFHF Theory Retreat.</p><div class="button-row"><a href="assets/ML4DQPM_Olga_Soloveva.pdf">Slides PDF</a></div></div>
+        </article>
+        <article class="preview-card">
+          <img src="assets/talk-muses2023.png" alt="Preview graphic for a MUSES seminar on QGP at finite temperature and chemical potential" />
+          <div><span class="preview-meta">MUSES Seminar Series · May 2023</span><h3>Dynamical properties of QGP matter at finite temperature and chemical potential</h3><p>Online seminar on quasiparticle dynamics, transport coefficients, and finite-density QCD matter.</p><div class="button-row"><a href="https://cloud.musesframework.io/s/gzMYX5y8MBWXpKQ?dir=/&editing=false&openfile=true">Video</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <p>Selected works on machine-learning applications in heavy-ion physics, DQPM quasiparticle properties, jet transport coefficients, heavy flavor, and QGP transport. For the complete and automatically updated list, see my <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP author profile</a> or the <a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP literature list with citation summary</a>.</p>
+      <div class="metrics-grid" aria-label="Publication metrics">
+        <div class="metric">
+          <strong>Publication list: >40</strong>
+          <span><a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP, most recent</a></span>
+        </div>
+        <div class="metric">
+          <strong>Citations: 560</strong>
+          <span><a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">Live citation summary</a></span>
+        </div>
+        <div class="metric">
+          <strong>h-index:13</strong>
+          <span><a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">Live InspireHEP profile</a></span>
+        </div>
+      </div>
+      <p class="note">Citation counts and h-index are linked dynamically because they change over time; the InspireHEP links above are configured with citation summary enabled and self-citations excluded.</p>
+      <div class="preview-grid" aria-label="Selected publication cards">
+        <article class="preview-card"><img src="assets/pub-qgp-trigger.png" alt="Preview graphic for CNN-based online trigger for quark–gluon plasma event selection" /><div><span class="preview-meta">arXiv:2605.26280 · 2026</span><h3>CNN-based online trigger for quark–gluon plasma event selection</h3><p>O. Soloveva, A. Belousov, I. Kisel and E. L. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2605.26280">arXiv</a><a href="https://inspirehep.net/literature?sort=mostrecent&amp;size=25&amp;page=1&amp;q=author%3A%22Soloveva%2C%20Olga%22%20or%20author%3A%22Soloveva%2C%20O%22%20or%20author%3A%22Solovjeva%2C%20O%22&amp;ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-ml-dqpm.png" alt="Preview graphic for Extraction of the microscopic properties of quasiparticles using deep neural networks" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Extraction of the microscopic properties of quasiparticles using deep neural networks</h3><p>O. Soloveva, A. Palermo and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2311.15984">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.034908">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-therm-charm.png" alt="Preview graphic for Thermal production of charm quarks in relativistic heavy-ion collisions" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Thermal production of charm quarks in relativistic heavy-ion collisions</h3><p>T. Song, I. Grishmanovskii, O. Soloveva and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2404.00425">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.034906">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-jet-transport.png" alt="Preview graphic for Jet transport coefficients by elastic and radiative scatterings in the strongly interacting QGP" /><div><span class="preview-meta">Phys. Rev. C 110 · 2024</span><h3>Jet transport coefficients by elastic and radiative scatterings in the strongly interacting QGP</h3><p>I. Grishmanovskii, O. Soloveva, T. Song, C. Greiner and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/2402.04923">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.110.014908">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-dqpmcp-medium.png" alt="Preview graphic for Transport properties and equation of state of hot and dense QGP matter near the critical endpoint" /><div><span class="preview-meta">Phys. Rev. D 105 · 2022</span><h3>Transport properties and equation of state of hot and dense QGP matter near the critical endpoint</h3><p>O. Soloveva, J. Aichelin and E. Bratkovskaya.</p><div class="button-row"><a href="https://inspirehep.net/literature/1907893">InspireHEP</a><a href="https://doi.org/10.1103/PhysRevD.105.054011">DOI</a></div></div></article>
+        <article class="preview-card"><img src="assets/pub-transport-coefficients.png" alt="Preview graphic for Transport coefficients for the hot quark-gluon plasma at finite chemical potential μB" /><div><span class="preview-meta">Phys. Rev. C 101 · 2020</span><h3>Transport coefficients for the hot quark-gluon plasma at finite chemical potential μ<sub>B</sub></h3><p>O. Soloveva, P. Moreau and E. Bratkovskaya.</p><div class="button-row"><a href="https://arxiv.org/abs/1911.08547">arXiv</a><a href="https://doi.org/10.1103/PhysRevC.101.045203">DOI</a></div></div></article>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Postdoctoral researcher / SMASH group, Prof. Dr. Hannah Elfner</strong>
+          <span class="date">2024–present: GSI Helmholtzzentrum für Schwerionenforschung and Goethe University Frankfurt</span>
+        </div>
+        <div class="timeline-item">
+          <strong>Postdoctoral researcher / PHSD group, Prof. Dr. Elena Bratkovskaya</strong>
+          <span class="date">2022–2024: Helmholtz Research Academy Hessen for FAIR (HFHF) and Goethe University Frankfurt</span>
+        </div>
+        <div class="timeline-item">
+          <strong>Ph.D. in Physics</strong>
+          <span class="date">Goethe University Frankfurt, 2018–2021</span>
+          <p>Thesis on transport properties of the strongly interacting quark–gluon plasma; magna cum laude.</p>
+        </div>
+        <div class="timeline-item">
+          <strong>PHSD developer</strong>
+          <span class="date">Since 2018</span>
+          <p>Development and application of the Parton–Hadron–String Dynamics transport approach.</p>
+        </div>
+      </div>
+      <p><a href="assets/CV_Olga_Soloveva_2026.pdf">Download CV</a></p>
+    </section>
+
+    <section id="code">
+      <h2>Code and projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>QGP trigger ML</h3>
+          <p>Compact CNN-based event classification for high-rate heavy-ion experiments and CBM-oriented online event selection.</p>
+        </article>
+        <article class="card">
+          <h3>PHSD/DQPM analysis</h3>
+          <p>Tools and workflows for microscopic transport simulations, event-level observables, transport coefficients, and heavy-flavour studies.</p>
+        </article>
+        <article class="card">
+          <h3>Machine-learning studies</h3>
+          <p>Exploratory ML projects using CNNs, GNNs, transformers, and interpretability methods such as SHAP.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:oesolovjeva@gmail.com">oesolovjeva@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/olgasolovev">github.com/olgasolovev</a></p>
+      <p><strong>GitLab:</strong> <a href="https://gitlab.com/osolo">gitlab.com/osolo</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/olga-evg-soloveva/">linkedin.com/in/olga-evg-soloveva</a></p>
+      <p><strong>Academic profile:</strong> <a href="https://inspirehep.net/authors/1418758?ui-citation-summary=true&amp;ui-exclude-self-citations=true">InspireHEP author page</a></p>
+    </section>
+
+    <section id="outreach">
+      <h2>Outreach</h2>
+      <p><strong>Public talk “Early Universe and Fundamental Interactions”.</strong><br />
+        Cultural and educational project “Kurilka Gutenberga”, Moscow, Russia.
+        <a href="https://www.youtube.com/watch?v=TEUe_cgZ-Y0">Watch on YouTube</a>.
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/TEUe_cgZ-Y0"
+          title="Early Universe and Fundamental Interactions — public talk by Olga Soloveva"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <p><a href="quiz.html">LPM Quiz</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="datenschutz.html#license">License</a></p>
   </main>
 
-  <footer style="margin-top: 4rem;">
+  <footer>
     © <span id="year"></span> Olga Soloveva. Built with static HTML for GitHub Pages.
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // --- LPM Quiz Script ---
-    const quizData = [
-        {
-            question: "1. What does the Landau-Pomeranchuk-Migdal (LPM) effect primarily describe in high-energy physics?",
-            options: {
-                a: "Increased radiation from independent scatterings",
-                b: "Suppressed radiation due to quantum interference",
-                c: "The rapid absorption of gluons by the nucleus",
-                d: "The deceleration of particles in a vacuum"
-            },
-            correct: "b"
-        },
-        {
-            question: "2. In the scattering timeline schematic, what does &tau;<sub>f</sub> represent?",
-            options: {
-                a: "Total flight time",
-                b: "Temperature of the field",
-                c: "Gluon formation time",
-                d: "Time between independent collisions"
-            },
-            correct: "c"
-        },
-        {
-            question: "3. What happens if the gluon formation time (&tau;<sub>f</sub>) spans across multiple scattering centers?",
-            options: {
-                a: "The scattering centers act coherently, leading to suppressed radiation.",
-                b: "The particle stops moving entirely.",
-                c: "The radiation output is exactly doubled.",
-                d: "The exchanged particle breaks apart into quarks."
-            },
-            correct: "a"
-        },
-        {
-            question: "4. Compared to standard independent scattering (Bethe-Heitler), the total radiation under the LPM effect is:",
-            options: {
-                a: "Significantly greater",
-                b: "Exactly the same",
-                c: "Less than the sum of independent scatterings",
-                d: "Completely zero"
-            },
-            correct: "c"
-        }
-    ];
-
-    const quizContainer = document.getElementById('quiz');
-    const resultsContainer = document.getElementById('quiz-results');
-    const submitButton = document.getElementById('submit-quiz');
-
-    function buildQuiz() {
-        const output = [];
-        quizData.forEach((currentQuestion, questionNumber) => {
-            const answers = [];
-            for (letter in currentQuestion.options) {
-                answers.push(
-                    `<label class="option-label">
-                        <input type="radio" name="question${questionNumber}" value="${letter}">
-                        <strong>${letter.toUpperCase()}</strong>: ${currentQuestion.options[letter]}
-                    </label>`
-                );
-            }
-            output.push(
-                `<div class="question">
-                    <h4>${currentQuestion.question}</h4>
-                    <div class="options">${answers.join('')}</div>
-                    <div class="correct-answer" id="answer${questionNumber}" style="display:none;">
-                        Correct Answer: ${currentQuestion.correct.toUpperCase()}
-                    </div>
-                </div>`
-            );
-        });
-        quizContainer.innerHTML = output.join('');
-    }
-
-    function showResults() {
-        const answerContainers = quizContainer.querySelectorAll('.options');
-        let numCorrect = 0;
-
-        quizData.forEach((currentQuestion, questionNumber) => {
-            const answerContainer = answerContainers[questionNumber];
-            const selector = `input[name=question${questionNumber}]:checked`;
-            const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-            const correctDisplay = document.getElementById(`answer${questionNumber}`);
-            
-            correctDisplay.style.display = "block";
-
-            if (userAnswer === currentQuestion.correct) {
-                numCorrect++;
-                correctDisplay.style.color = "#27ae60"; 
-            } else {
-                correctDisplay.style.color = "#e74c3c";
-            }
-        });
-
-        resultsContainer.innerHTML = `You scored ${numCorrect} out of ${quizData.length}!`;
-        resultsContainer.style.display = "block";
-        submitButton.style.display = "none";
-    }
-
-    if(quizContainer && submitButton) {
-        buildQuiz();
-        submitButton.addEventListener('click', showResults);
-    }
   </script>
 </body>
 </html>
